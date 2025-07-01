@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "profileapp",
     "name": "profileapp",
     "slug": "profileapp",
     "version": "1.0.0",
@@ -13,17 +14,31 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.morgorn.profileapp",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.morgorn.profileapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "57fffa86-6b7b-4f5d-88c6-367d2fc97b3f"
+      }
     }
   }
 }
