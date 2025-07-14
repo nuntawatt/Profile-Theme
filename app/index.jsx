@@ -1,6 +1,6 @@
 // app/index.jsx
 import React from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, Dimensions,StatusBar } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, Dimensions, StatusBar, Linking } from "react-native";
 import { Link } from "expo-router";
 import { useTheme } from "./context/ThemeContext";
 import ThemeToggle from "./components/ThemeToggle";
@@ -233,12 +233,15 @@ const Home = () => {
 
           {/* Action Buttons */}
           <View style={styles.actionButtons}>
-            <TouchableOpacity style={styles.followButton}>
+              <TouchableOpacity style={styles.followButton}
+                onPress={() => Linking.openURL('https://www.instagram.com/morgorn.n/?hl=en')}>
               <Text style={styles.followButtonText}>FOLLOW</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={dynamicStyles.messageButton}>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={dynamicStyles.messageButton}
+                onPress={() => Linking.openURL('https://www.facebook.com/nuntawat.morgorn')}>
               <Text style={dynamicStyles.messageButtonText}>MESSAGE</Text>
-            </TouchableOpacity>
+              </TouchableOpacity>
           </View>
 
           {/* Stats */}
